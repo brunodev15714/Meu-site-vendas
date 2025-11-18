@@ -1,0 +1,431 @@
+/* style.css */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-size: cover;
+    color: #111;
+    line-height: 1.5;
+    min-height: 100vh;
+}
+header {
+    padding: 12px 20px;
+    background: rgba(255,255,255,0.95);
+    border-bottom: 1px solid #ebebeb;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(12px);
+}
+.nav-top { font-size: 0.75em; text-align: right; margin-bottom: 8px; }
+.nav-top a { margin: 0 8px; color: #757575; text-decoration: none; }
+.nav-main { display: flex; align-items: center; max-width: 1400px; margin: 0 auto; }
+.logo img {
+    width: 120px; height: 120px; border-radius: 50%;
+    border: 3px solid rgba(150, 50, 255, 0.3);
+    box-shadow: 0 0 20px rgba(150, 50, 255, 0.4);
+}
+nav { margin-left: 60px; }
+nav a {
+    margin: 0 18px; text-decoration: none; color: #111;
+    font-weight: 500; font-size: 0.95em; transition: 0.3s;
+}
+nav a:hover { color: #9632ff; }
+.search-bar {
+    background: rgba(245,245,245,0.9); border-radius: 20px;
+    padding: 8px 15px; width: 220px; border: none;
+    margin-left: auto; backdrop-filter: blur(10px);
+}
+.icons { margin-left: 20px; display: flex; gap: 20px; font-size: 1.3em; }
+
+/* Sobre Nós (agora é uma seção normal, sem animação) */
+.about-section {
+    background: rgba(255,255,255,0.9);
+    padding: 80px 40px;
+    margin: 60px auto;
+    max-width: 1400px;
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(150,50,255,0.25);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(150,50,255,0.2);
+    text-align: center;
+}
+.about-section h2 {
+    font-size: 2.8em; color: #9632ff;
+    text-shadow: 0 2px 10px rgba(150,50,255,0.3);
+    margin-bottom: 30px;
+}
+.about-section p { font-size: 1.1em; max-width: 900px; margin: 20px auto; }
+
+/* Produtos */
+.section-title {
+    text-align: center; font-size: 2.8em; font-weight: bold;
+    margin: 50px auto 30px; color: #9632ff;
+    text-shadow: 0 2px 10px rgba(150,50,255,0.3);
+}
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1400px;
+    margin: 0 auto 80px;
+    padding: 20px;
+}
+.product-card {
+    background: rgba(255,255,255,0.82);
+    text-align: center;
+    padding: 50px 20px 40px;
+    border-radius: 20px;
+    transition: all 0.4s;
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(150,50,255,0.2);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+.product-card:hover {
+    transform: translateY(-15px);
+    background: rgba(255,255,255,0.95);
+    box-shadow: 0 20px 40px rgba(150,50,255,0.25);
+}
+.product-card img {
+    max-width: 90%; height: auto;
+    filter: drop-shadow(0 15px 25px rgba(0,0,0,0.2));
+    transition: 0.4s;
+}
+.product-card:hover img { transform: scale(1.05); }
+.product-name {
+    margin-top: 25px; font-weight: 600; font-size: 1.2em; color: #111;
+}
+.product-price {
+    margin-top: 8px; font-weight: bold; font-size: 1.4em; color: #9632ff;
+}
+.buy-btn {
+    background: transparent; color: #9632ff; border: 2px solid #9632ff;
+    padding: 12px 28px; margin-top: 20px; cursor: pointer;
+    border-radius: 30px; font-weight: bold; transition: 0.4s;
+}
+.product-card:hover .buy-btn {
+    background: #9632ff; color: white;
+    box-shadow: 0 0 20px rgba(150,50,255,0.5);
+}
+footer {
+    background: rgba(17,17,17,0.95); color: white; text-align: center;
+    padding: 60px 20px; font-size: 0.9em; backdrop-filter: blur(10px);
+}
+@media (max-width: 600px) {
+    nav { display: none; }
+    .logo img { width: 80px; height: 80px; }
+    .section-title { font-size: 2.2em; }
+}
+
+/* ===== PÁGINA DE CHECKOUT ===== */
+.checkout-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+}
+.checkout-card {
+    background: rgba(255,255,255,0.9);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(150,50,255,0.25);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(150,50,255,0.2);
+}
+.product-summary {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+    padding: 20px;
+    background: rgba(150,50,255,0.1);
+    border-radius: 15px;
+}
+.product-summary img {
+    width: 120px;
+    border-radius: 10px;
+}
+.checkout-card label {
+    display: block;
+    margin: 15px 0 5px;
+    font-weight: 600;
+    color: #9632ff;
+}
+.checkout-card input, .checkout-card select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #9632ff;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.8);
+}
+
+/* ===== BOTÃO ROXO CHEIO (igual imagem_02 e imagem_03) ===== */
+.buy-btn.filled {
+    background: #9632ff;
+    color: white;
+    border: 2px solid #9632ff;
+    padding: 14px 32px;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: all 0.4s;
+    box-shadow: 0 0 20px rgba(150, 50, 255, 0.5);
+}
+.buy-btn.filled:hover {
+    background: #7e1fff;
+    transform: translateY(-3px);
+    box-shadow: 0 0 30px rgba(150, 50, 255, 0.8);
+}
+
+/* Ajuste no detalhe expansível pra ficar igual imagem_01 */
+.product-details ul {
+    list-style: none;
+    padding: 0 15px;
+}
+.product-details p {
+    margin: 8px 0;
+    font-size: 0.95em;
+    color: #333;
+}
+.product-details br {
+    margin-bottom: 10px;
+}
+
+/* Hover no card mantém o botão roxo */
+.product-card:hover .buy-btn.filled {
+    box-shadow: 0 0 35px rgba(150, 50, 255, 0.9);
+}
+
+/* ===== SEÇÃO SOBRE NÓS - NÉBULA GAMES ===== */
+.nebula-about {
+    background: linear-gradient(135deg, rgba(20,0,40,0.95), rgba(0,0,0,0.98)),
+                url('img/background-roxo-nebula.jpg') center/cover fixed;
+    color: #fff;
+    padding: 120px 20px;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+.nebula-title {
+    font-size: 5.5rem;
+    font-weight: 900;
+    background: linear-gradient(90deg, #9632ff, #e040fb);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    margin-bottom: 10px;
+    letter-spacing: 4px;
+    display: inline-block;
+}
+.nebula-subtitle {
+    font-size: 1.4rem;
+    opacity: 0.9;
+    margin-bottom: 60px;
+    font-weight: 300;
+}
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    margin: 80px 0;
+    text-align: left;
+}
+.about-text h2,
+.about-values h2 {
+    font-size: 2.4rem;
+    color: #9632ff;
+    margin-bottom: 20px;
+    text-shadow: 0 0 20px rgba(150,50,255,0.4);
+}
+.about-text p {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    opacity: 0.95;
+}
+.highlight {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #e040fb;
+    background: rgba(150,50,255,0.15);
+    padding: 20px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+}
+
+/* VALORES */
+.values-list {
+    list-style: none;
+    padding: 0;
+}
+.values-list li {
+    font-size: 1.2rem;
+    padding: 18px 0;
+    border-bottom: 1px solid rgba(150,50,255,0.3);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.values-list li:last-child { border-bottom: none; }
+.values-list li span {
+    color: #9632ff;
+    font-weight: 700;
+    min-width: 180px;
+    font-size: 1.1rem;
+}
+
+/* CALL TO ACTION FINAL */
+.call-action {
+    margin-top: 80px;
+    padding: 40px;
+    background: rgba(150,50,255,0.15);
+    border-radius: 20px;
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(150,50,255,0.3);
+}
+.call-action p {
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 1.6;
+}
+
+/* RESPONSIVO */
+@media (max-width: 900px) {
+    .about-grid { grid-template-columns: 1fr; gap: 50px; text-align: center; }
+    .values-list li { justify-content: center; }
+    .nebula-title { font-size: 4rem; }
+}
+@media (max-width: 600px) {
+    .nebula-title { font-size: 3.2rem; }
+    .nebula-subtitle { font-size: 1.2rem; }
+    .about-text h2, .about-values h2 { font-size: 2rem; }
+}
+
+/* ===== LIGHTBOX / ZOOM NA IMAGEM ===== */
+.image-zoom {
+    cursor: zoom-in;
+    transition: transform 0.3s ease;
+}
+.image-zoom:hover {
+    transform: scale(1.08);
+}
+
+/* Modal fullscreen */
+.zoom-modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.92);
+    backdrop-filter: blur(8px);
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    animation: fadeIn 0.3s ease;
+}
+.zoom-modal.active {
+    display: flex;
+}
+.zoom-modal img {
+    max-width: 95%;
+    max-height: 95vh;
+    border-radius: 16px;
+    box-shadow: 0 0 60px rgba(150, 50, 255, 0.6);
+    border: 3px solid #9632ff;
+    animation: zoomIn 0.4s ease;
+}
+.close-zoom {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    font-size: 4rem;
+    color: #fff;
+    opacity: 0.7;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.close-zoom:hover {
+    opacity: 1;
+    transform: scale(1.1);
+    color: #9632ff;
+}
+
+/* Animações suaves */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+@keyframes zoomIn {
+    from { transform: scale(0.7); }
+    to { transform: scale(1); }
+}
+
+/* Mobile: fecha ao tocar fora da imagem */
+@media (max-width: 768px) {
+    .close-zoom { font-size: 3rem; top: 20px; right: 20px; }
+    .zoom-modal img { max-width: 98%; }
+}
+
+/* ===== MISSÃO - ESTILO ORIGINAL LINDO ===== */
+.about-mission {
+    margin: 100px auto;
+    max-width: 900px;
+    padding: 50px 40px;
+    background: rgba(150, 50, 255, 0.15);
+    border-radius: 20px;
+    border: 1px solid rgba(150, 50, 255, 0.4);
+    backdrop-filter: blur(12px);
+    text-align: center;
+    box-shadow: 0 0 40px rgba(150, 50, 255, 0.2);
+}
+
+.about-mission h2 {
+    font-size: 2.8rem;
+    color: #9632ff;
+    margin-bottom: 30px;
+    text-shadow: 0 0 20px rgba(150, 50, 255, 0.5);
+    font-weight: 900;
+}
+
+.mission-text {
+    font-size: 1.5rem;
+    line-height: 1.8;
+    margin-bottom: 25px;
+    font-weight: 500;
+    opacity: 0.98;
+}
+
+.mission-target {
+    font-size: 1.3rem;
+    line-height: 1.9;
+    opacity: 0.95;
+    margin: 30px 0;
+}
+
+.mission-promise {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #e040fb;
+    margin-top: 30px;
+    text-shadow: 0 0 15px rgba(224, 64, 251, 0.6);
+}
+
+/* Responsivo da missão */
+@media (max-width: 768px) {
+    .about-mission {
+        margin: 60px 20px;
+        padding: 40px 25px;
+    }
+    .about-mission h2 { font-size: 2.3rem; }
+    .mission-text { font-size: 1.3rem; }
+    .mission-promise { font-size: 1.5rem; }
+}
