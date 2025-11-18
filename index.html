@@ -3,70 +3,245 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Periféricos Gamer à Venda - Barato!</title>
-    <style>
-        body { font-family: Arial; background: #111; color: white; text-align: center; padding: 20px; }
-        h1 { font-size: 2.5em; }
-        .produto { background: #222; padding: 20px; border-radius: 15px; max-width: 500px; margin: 30px auto; box-shadow: 0 0 15px rgba(0,255,0,0.5); }
-        img { max-width: 90%; border-radius: 15px; margin: 15px 0; }
-        button { background: #00ff00; color: black; font-size: 20px; padding: 15px 30px; border: none; border-radius: 10px; cursor: pointer; }
-        button:hover { background: #00cc00; }
-        .preco { font-size: 1.8em; color: #00ff00; }
-        footer { margin-top: 50px; font-size: 0.9em; }
-    </style>
+    <link rel="shortcut icon" href="img/Logo/Logo-nebula.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>Nébula Games - Periféricos Gamer com Preço Justo</title>
 </head>
 <body>
-    <h1>🔥 Periféricos Gamer à Venda - Preços Baixos! 🔥</h1>
-    <p>Escaneou o QR code atrás do produto? Aqui tem controles, mouses, teclados e mais! Tudo novo ou semi-novo. Manda mensagem no WhatsApp pra comprar ou perguntar.</p>
 
-    <!-- PRODUTO 1: Controle Xbox -->
-    <div class="produto">
-        <h2>🎮 Controle Xbox Series X/S - Original</h2>
-        <img src="https://i.imgur.com/EXEMPLO_CONTROLE.jpg" alt="Controle Xbox"> <!-- TROQUE PELA SUA FOTO NO IMGUR -->
-        <p class="preco">R$ 250,00</p>
-        <p>Novo/lacrado, sem fio, compatível PC/Console. Envio Brasil todo!</p>
-        <button onclick="window.location.href='https://wa.me/SEU_NUMERO?text=Oi, quero o Controle Xbox (R$250) do QR code!'">💬 Comprar no WhatsApp</button>
-    </div>
+    <!-- HEADER FIXO -->
+    <header>
+        <div class="nav-main">
+            <div class="logo">
+                <a href="#"><img src="img/Logo/Logo-nebula.png" alt="Nébula Games"></a>
+            </div>
+            <nav>
+                <a href="#sobre">Sobre</a>
+                <a href="#mouses">Mouses</a>
+                <a href="#teclados">Teclados</a>
+                <a href="#headsets">Headsets</a>
+                <a href="#controles">Controles</a>
+            </nav>
+            <input type="text" class="search-bar" placeholder="Buscar periféricos...">
+            <div class="icons">❤️<span style="margin-left:20px;">🛒</span></div>
+        </div>
+    </header>
 
-    <!-- PRODUTO 2: Mouse Gamer -->
-    <div class="produto">
-        <h2>🖱️ Mouse Gamer RGB - 12.000 DPI</h2>
-        <img src="https://i.imgur.com/EXEMPLO_MOUSE.jpg" alt="Mouse Gamer"> <!-- TROQUE PELA SUA FOTO -->
-        <p class="preco">R$ 150,00</p>
-        <p>Óptico com fio, 8 botões, RGB personalizável. Perfeito pra jogos!</p>
-        <button onclick="window.location.href='https://wa.me/SEU_NUMERO?text=Oi, quero o Mouse Gamer (R$150) do QR code!'">💬 Comprar no WhatsApp</button>
-    </div>
+    <!-- SOBRE NÓS + MISSÃO -->
+    <section class="nebula-about" id="sobre">
+        <div class="about-container">
+            <h1 class="nebula-title">NÉBULA GAMES</h1>
+            <p class="nebula-subtitle">Periféricos gamer que parecem de outro planeta — com preço deste mundo.</p>
 
-    <!-- PRODUTO 3: Teclado Mecânico -->
-    <div class="produto">
-        <h2>⌨️ Teclado Mecânico RGB - Switch Blue</h2>
-        <img src="https://i.imgur.com/EXEMPLO_TECLADO.jpg" alt="Teclado Mecânico"> <!-- TROQUE PELA SUA FOTO -->
-        <p class="preco">R$ 300,00</p>
-        <p>Full size, anti-ghosting, RGB full. Som clicado top!</p>
-        <button onclick="window.location.href='https://wa.me/SEU_NUMERO?text=Oi, quero o Teclado Mecânico (R$300) do QR code!'">💬 Comprar no WhatsApp</button>
-    </div>
+            <div class="about-grid">
+                <div class="about-text">
+                    <h2>Quem somos</h2>
+                    <p>Somos a loja que acabou com o “preço gamer inflacionado”.<br>Compramos direto dos melhores fabricantes e revendemos com margem justa — simples assim.</p>
+                    <p>Na Nébula você não só vê o produto: você <strong>joga com ele antes de comprar</strong>.<br>Temos uma área free-to-play com setups completos pra você testar tudo na hora, de graça.</p>
+                    <p>Cada expositor tem um <strong>QR Code gigante</strong>: escaneia com o celular e já cai direto na compra. Rápido. Prático. Futurista.</p>
+                    <p class="highlight">Preto + Roxo é nossa alma.<br>Qualidade insana + preço que cabe no bolso é nossa missão.</p>
+                </div>
 
-    <!-- PRODUTO 4: Headset Gamer (exemplo extra) -->
-    <div class="produto">
-        <h2>🎧 Headset Gamer com Microfone</h2>
-        <img src="https://i.imgur.com/EXEMPLO_HEADSET.jpg" alt="Headset Gamer"> <!-- TROQUE PELA SUA FOTO -->
-        <p class="preco">R$ 180,00</p>
-        <p>Som 7.1, LED, cancelamento de ruído. Confortável pra horas de jogo!</p>
-        <button onclick="window.location.href='https://wa.me/SEU_NUMERO?text=Oi, quero o Headset Gamer (R$180) do QR code!'">💬 Comprar no WhatsApp</button>
-    </div>
+                <div class="about-values">
+                    <h2>Nossos Valores</h2>
+                    <ul class="values-list">
+                        <li><span>Preço Justo</span> — Acabou o “gamer tax”</li>
+                        <li><span>Experiência Real</span> — Joga antes de levar</li>
+                        <li><span>Inovação Visível</span> — QR Code, setups free-to-play, design único</li>
+                        <li><span>Qualidade Sem Frescura</span> — Só entra o que a gente mesmo usaria</li>
+                        <li><span>Surpreender Sempre</span> — Cada visita tem que gerar um “nossa, que foda!”</li>
+                    </ul>
+                </div>
+            </div>
 
-    <!-- PRODUTO 5: Mousepad Grande (exemplo extra) -->
-    <div class="produto">
-        <h2>🖱️ Mousepad Gamer XXL - 90x40cm</h2>
-        <img src="https://i.imgur.com/EXEMPLO_MOUSEPAD.jpg" alt="Mousepad"> <!-- TROQUE PELA SUA FOTO -->
-        <p class="preco">R$ 80,00</p>
-        <p>Base anti-derrapante, borda costurada, speed/control.</p>
-        <button onclick="window.location.href='https://wa.me/SEU_NUMERO?text=Oi, quero o Mousepad (R$80) do QR code!'">💬 Comprar no WhatsApp</button>
-    </div>
+            <div class="about-mission">
+                <h2>Nossa Missão</h2>
+                <p class="mission-text">Levar periféricos gamer de <strong>alta performance</strong> para <strong>todos os bolsos</strong>,<br>democratizando o acesso a setups profissionais e acabando de vez com o preço abusivo que o mercado pratica.</p>
+                <p class="mission-target">Nosso público? Todo gamer que sonha com um setup insano,<br>do <strong>jogador casual</strong> que joga no final de semana até o <strong>pro player</strong> que vive de competição —<br>ninguém mais precisa escolher entre qualidade e dinheiro no bolso.</p>
+                <p class="mission-promise">Na Nébula, você sobe de nível sem zerar a conta.</p>
+            </div>
 
+            <div class="call-action">
+                <p>Bem-vindo à Nébula.<br>Aqui o seu setup sobe de nível sem a sua conta zerar.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- MOUSES -->
+    <section id="mouses">
+        <h1 class="section-title">Mouses Gamer Nébula</h1>
+        <div class="products-grid">
+            <div class="product-card">
+                <img class="image-zoom" src="img/mouses/mouse_01.png" alt="Mouse RGB Pro">
+                <div class="product-info">
+                    <input type="checkbox" id="m1" class="toggle"><label for="m1" class="product-name">Mouse RGB Pro 16K DPI</label>
+                    <div class="product-details"><ul><br><p>Sensor: Pixart 3335 (16.000 DPI)</p><p>Switches: Omron 50M cliques</p><p>Conexão: USB com cabo paracord</p><p>Até 100h de bateria</p></ul></div>
+                </div>
+                <div class="product-price">R$ 150,00</div>
+                <button class="buy-btn filled" onclick="window.open('comprar.html?produto=mouse-rgb-pro&preco=150','_blank')">Comprar Agora</button>
+            </div>
+
+            <div class="product-card">
+                <img class="image-zoom" src="img/mouses/mouse_02.png" alt="Mouse Ultra Leve">
+                <div class="product-info">
+                    <input type="checkbox" id="m2" class="toggle"><label for="m2" class="product-name">Mouse Ultra Leve Nebula X1</label>
+                    <div class="product-details"><ul><br><p>Sensor: Hero 25K (25.600 DPI)</p><p>Peso: Apenas 55g</p><p>Switches: Ópticos 70M cliques</p><p>Bateria: Até 70h</p></ul></div>
+                </div>
+                <div class="product-price">R$ 220,00</div>
+                <button class="buy-btn filled" onclick="window.open('comprar.html?produto=mouse-ultra-leve&preco=220','_blank')">Comprar Agora</button>
+            </div>
+
+            <div class="product-card">
+                <img class="image-zoom" src="img/mouses/mouse_03.png" alt="Mouse Sem Fio">
+                <div class="product-info">
+                    <input type="checkbox" id="m3" class="toggle"><label for="m3" class="product-name">Mouse Sem Fio Nebula Edition</label>
+                    <div class="product-details"><ul><br><p>Sensor: Focus+ 26K DPI</p><p>Peso: 74g</p><p>Switches: Ópticos Gen-2</p><p>Até 100h de bateria</p></ul></div>
+                </div>
+                <div class="product-price">R$ 280,00</div>
+                <button class="buy-btn filled" onclick="window.open('comprar.html?produto=mouse-sem-fio&preco=280','_blank')">Comprar Agora</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- TECLADOS -->
+    <section id="teclados">
+        <h1 class="section-title">Teclados Gamer Nébula</h1>
+        <div class="products-grid">
+            <div class="product-card">
+                <img class="image-zoom" src="img/teclados/teclado_01.png" alt="Teclado Mecânico">
+                <div class="product-info">
+                    <input type="checkbox" id="t1" class="toggle"><label for="t1" class="product-name">Teclado Mecânico RGB Blue Switch</label>
+                    <div class="product-details"><ul><br><p>Switches: Blue mecânicos</p><p>Anti-ghosting: 100% N-key rollover</p><p>RGB: Per key personalizável</p><p>Conexão: USB wired</p></ul></div>
+                </div>
+                <div class="product-price">R$ 300,00</div>
+                <button class="buy-btn filled" onclick="window.open('comprar.html?produto=teclado-mecanico-rgb&preco=300','_blank')">Comprar Agora</button>
+            </div>
+
+            <div class="product-card">
+                <img class="image-zoom" src="img/teclados/teclado_02.png" alt="Teclado Low Profile">
+                <div class="product-info">
+                    <input type="checkbox" id="t2" class="toggle"><label for="t2" class="product-name">Teclado Low Profile Sem Fio</label>
+                    <div class="product-details"><ul><br><p>Switches: Scissor low-profile</p><p>Bateria: Até 200h</p><p>RGB: Zona única</p><p>Conexão: Bluetooth + 2.4GHz</p></ul></div>
+                </div>
+                <div class="product-price">R$ 250,00</div>
+                <button class="buy-btn filled" onclick="window.open('comprar.html?produto=teclado-low-profile&preco=250','_blank')">Comprar Agora</button>
+            </div>
+
+            <div class="product-card">
+                <img class="image-zoom" src="img/teclados/teclado_03.png" alt="Teclado TKL">
+                <div class="product-info">
+                    <input type="checkbox" id="t3" class="toggle"><label for="t3" class="product-name">Teclado TKL Gamer Red Switch</label>
+                    <div class="product-details"><ul><br><p>Switches: Red lineares</p><p>Formato: Tenkeyless</p><p>RGB: 16.8 milhões de cores</p><p>Conexão: USB detachable</p></ul></div>
+                </div>
+                <div class="product-price">R$ 200,00</div>
+                <button class="buy-btn filled" onclick="window.open('comprar.html?produto=teclado-tkl-gamer&preco=200','_blank')">Comprar Agora</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- HEADSETS -->
+    <section id="headsets">
+        <h1 class="section-title">Headsets Gamer Nébula</h1>
+        <div class="products-grid">
+            <div class="product-card">
+                <img class="image-zoom" src="img/headsets/headset_01.png" alt="Headset 7.1">
+                <div class="product-info">
+                    <input type="checkbox" id="h1" class="toggle"><label for="h1" class="product-name">Headset 7.1 Surround Nebula</label>
+                    <div class="product-details"><ul><br><p>Áudio: 7.1 virtual surround</p><p>Microfone: Detachável noise-canceling</p><p>RGB: Laterais sincronizáveis</p><p>Conexão: USB wired</p></ul></div>
+                </div>
+                <div class="product-price">R$ 180,00</div>
+                <button class="buy-btn filled" onclick="window.open('comprar.html?produto=headset-7-1-surround&preco=180','_blank')">Comprar Agora</button>
+            </div>
+
+            <div class="product-card">
+                <img class="image-zoom" src="img/headsets/headset_02.png" alt="Headset Wireless">
+                <div class="product-info">
+                    <input type="checkbox" id="h2" class="toggle"><label for="h2" class="product-name">Headset Wireless RGB</label>
+                    <div class="product-details"><ul><br><p>Áudio: Stereo high-fidelity</p><p>Bateria: 50h com RGB</p><p>Microfone: Flip-up</p><p>Conexão: 2.4GHz wireless</p></ul></div>
+                </div>
+                <div class="product-price">R$ 250,00</div>
+                <button class="buy-btn filled" onclick="window.open('comprar.html?produto=headset-wireless-rgb&preco=250','_blank')">Comprar Agora</button>
+            </div>
+
+            <div class="product-card">
+                <img class="image-zoom" src="img/headsets/headset_03.png" alt="Headset ANC">
+                <div class="product-info">
+                    <input type="checkbox" id="h3" class="toggle"><label for="h3" class="product-name">Headset Noise Canceling Pro</label>
+                    <div class="product-details"><ul><br><p>Áudio: ANC ativo</p><p>Microfone: ENC ambiental</p><p>Conforto: Memory foam</p><p>Conexão: Bluetooth 5.0</p></ul></div>
+                </div>
+                <div class="product-price">R$ 320,00</div>
+                <button class="buy-btn filled" onclick="window.open('comprar.html?produto=headset-noise-cancel&preco=320','_blank')">Comprar Agora</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTROLES -->
+    <section id="controles">
+        <h1 class="section-title">Controles Gamer Nébula</h1>
+        <div class="products-grid">
+            <div class="product-card">
+                <img class="image-zoom" src="img/controles/controle_01.png" alt="Controle Xbox">
+                <div class="product-info">
+                    <input type="checkbox" id="c1" class="toggle"><label for="c1" class="product-name">Controle Xbox Series Nebula Edition</label>
+                    <div class="product-details"><ul><br><p>Vibração: Haptic feedback</p><p>Bateria: Até 40h</p><p>Botões: Customizáveis</p><p>Conexão: Bluetooth + USB</p></ul></div>
+                </div>
+                <div class="product-price">R$ 250,00</div>
+                <button class="buy-btn filled" onclick="window.open('comprar.html?produto=controle-xbox-series&preco=250','_blank')">Comprar Agora</button>
+            </div>
+
+            <div class="product-card">
+                <img class="image-zoom" src="img/controles/controle_02.png" alt="Controle PS5">
+                <div class="product-info">
+                    <input type="checkbox" id="c2" class="toggle"><label for="c2" class="product-name">Controle PS5 DualSense</label>
+                    <div class="product-details"><ul><br><p>Vibração: Adaptive triggers</p><p>Microfone: Integrado</p><p>RGB: Barra touchpad</p><p>Conexão: Wireless PS5</p></ul></div>
+                </div>
+                <div class="product-price">R$ 350,00</div>
+                <button class="buy-btn filled" onclick="window.open('comprar.html?produto=controle-ps5-dualsense&preco=350','_blank')">Comprar Agora</button>
+            </div>
+
+            <div class="product-card">
+                <img class="image-zoom" src="img/controles/controle_03.png" alt="Controle Switch">
+                <div class="product-info">
+                    <input type="checkbox" id="c3" class="toggle"><label for="c3" class="product-name">Controle Switch Pro Wireless</label>
+                    <div class="product-details"><ul><br><p>Vibração: HD rumble</p><p>Bateria: 40h</p><p>Sensores: Gyro + NFC</p><p>Conexão: Bluetooth</p></ul></div>
+                </div>
+                <div class="product-price">R$ 280,00</div>
+                <button class="buy-btn filled" onclick="window.open('comprar.html?produto=controle-switch-pro&preco=280','_blank')">Comprar Agora</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
     <footer>
-        <p>Frete grátis acima de R$ 500 | Pagamento: PIX, cartão ou boleto | Contato rápido: WhatsApp SEU_NUMERO</p>
-        <p>Atualizado em novembro/2025 - Mais itens chegando!</p>
+        <p>Frete grátis acima de R$ 500 | PIX, cartão ou boleto</p>
+        <p>WhatsApp: (11) 91219-5629</p>
+        <p>Nébula Games © 2025 — Periféricos gamer com vibe cósmica</p>
     </footer>
+
+    <!-- MODAL ZOOM UNIVERSAL -->
+    <div class="zoom-modal" id="zoomModal">
+        <span class="close-zoom" onclick="closeZoom()">×</span>
+        <img id="zoomedImg" src="" alt="Zoom do produto">
+    </div>
+
+    <script>
+        // Zoom em todas as imagens
+        document.querySelectorAll('.image-zoom').forEach(img => {
+            img.onclick = function() {
+                document.getElementById('zoomedImg').src = this.src;
+                document.getElementById('zoomModal').classList.add('active');
+                document.body.style.overflow = 'hidden';
+            };
+        });
+
+        function closeZoom() {
+            document.getElementById('zoomModal').classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        document.getElementById('zoomModal').onclick = e => { if (e.target === e.currentTarget) closeZoom(); };
+        document.addEventListener('keyup', e => { if (e.key === 'Escape') closeZoom(); });
+    </script>
+
 </body>
 </html>
