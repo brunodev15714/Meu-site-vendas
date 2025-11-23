@@ -9,25 +9,47 @@
 </head>
 <body>
 
-    <!-- HEADER FIXO -->
-    <header>
+    <!-- HEADER -->
+    <header id="mainHeader">
         <div class="nav-main">
-            <div class="logo">
-                <a href="#"><img src="imagem/logo/logo-1.png" alt="Nébula Games"></a>
+            <!-- LOGO CIRCULAR COM MENU DROPDOWN -->
+            <div class="logo-container" id="menuToggle">
+                <img src="imagem/logo/logo-1.png" alt="Nébula Games" class="logo-img">
+                <!-- Hambúrguer dentro da logo (só aparece no mobile) -->
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <!-- MENU DROPDOWN (aparece abaixo da logo no mobile) -->
+                <div class="dropdown-menu" id="dropdownMenu">
+                    <a href="#sobre">Sobre</a>
+                    <a href="#mouses">Mouses</a>
+                    <a href="#teclados">Teclados</a>
+                    <a href="#headsets">Headsets</a>
+                    <a href="#controles">Controles</a>
+                </div>
             </div>
-            <nav>
+
+            <!-- MENU DESKTOP -->
+            <nav id="desktopMenu">
                 <a href="#sobre">Sobre</a>
                 <a href="#mouses">Mouses</a>
                 <a href="#teclados">Teclados</a>
                 <a href="#headsets">Headsets</a>
                 <a href="#controles">Controles</a>
             </nav>
+
             <input type="text" class="search-bar" placeholder="Buscar periféricos...">
-            <div class="icons">❤️<span style="margin-left:20px;">🛒</span></div>
+            <div class="icons">
+                <span class="icon-heart">❤️</span>
+                <span class="icon-cart">🛒</span>
+            </div>
         </div>
     </header>
 
-    <!-- SOBRE NÓS + MISSÃO -->
+    <!-- SOBRE NÓS -->
     <section class="nebula-about" id="sobre">
         <div class="about-container">
             <h1 class="nebula-title">NÉBULA GAMES</h1>
@@ -46,7 +68,7 @@
                     <h2>Nossos Valores</h2>
                     <ul class="values-list">
                         <li><span>Preço Justo</span> — Acabou o “gamer tax”</li>
-                        <li><span>Experiência Real</span> — Joga antes de levar</li>
+                        <li><span>Experiência Real</span> — Jaga antes de levar</li>
                         <li><span>Inovação Visível</span> — QR Code, setups free-to-play, design único</li>
                         <li><span>Qualidade Sem Frescura</span> — Só entra o que a gente mesmo usaria</li>
                         <li><span>Surpreender Sempre</span> — Cada visita tem que gerar um “nossa, que foda!”</li>
@@ -80,7 +102,6 @@
                 <div class="product-price">R$ 150,00</div>
                 <button class="buy-btn filled" onclick="window.open('comprar.html?produto=mouse-rgb-pro&preco=150','_blank')">Comprar Agora</button>
             </div>
-
             <div class="product-card">
                 <img class="image-zoom" src="imagem/mouse/mouse-02.png.png" alt="Mouse Ultra Leve">
                 <div class="product-info">
@@ -90,7 +111,6 @@
                 <div class="product-price">R$ 220,00</div>
                 <button class="buy-btn filled" onclick="window.open('comprar.html?produto=mouse-ultra-leve&preco=220','_blank')">Comprar Agora</button>
             </div>
-
             <div class="product-card">
                 <img class="image-zoom" src="imagem/mouse/mouse-03.png.png" alt="Mouse Sem Fio">
                 <div class="product-info">
@@ -116,7 +136,6 @@
                 <div class="product-price">R$ 300,00</div>
                 <button class="buy-btn filled" onclick="window.open('comprar.html?produto=teclado-mecanico-rgb&preco=300','_blank')">Comprar Agora</button>
             </div>
-
             <div class="product-card">
                 <img class="image-zoom" src="imagem/teclado/teclado-02.png.png" alt="Teclado Low Profile">
                 <div class="product-info">
@@ -126,7 +145,6 @@
                 <div class="product-price">R$ 250,00</div>
                 <button class="buy-btn filled" onclick="window.open('comprar.html?produto=teclado-low-profile&preco=250','_blank')">Comprar Agora</button>
             </div>
-
             <div class="product-card">
                 <img class="image-zoom" src="imagem/teclado/teclado-03.png.png" alt="Teclado TKL">
                 <div class="product-info">
@@ -152,7 +170,6 @@
                 <div class="product-price">R$ 180,00</div>
                 <button class="buy-btn filled" onclick="window.open('comprar.html?produto=headset-7-1-surround&preco=180','_blank')">Comprar Agora</button>
             </div>
-
             <div class="product-card">
                 <img class="image-zoom" src="imagem/headset/headset-02.png.png" alt="Headset Wireless">
                 <div class="product-info">
@@ -162,7 +179,6 @@
                 <div class="product-price">R$ 250,00</div>
                 <button class="buy-btn filled" onclick="window.open('comprar.html?produto=headset-wireless-rgb&preco=250','_blank')">Comprar Agora</button>
             </div>
-
             <div class="product-card">
                 <img class="image-zoom" src="imagem/headset/headset-03.png.png" alt="Headset ANC">
                 <div class="product-info">
@@ -188,7 +204,6 @@
                 <div class="product-price">R$ 250,00</div>
                 <button class="buy-btn filled" onclick="window.open('comprar.html?produto=controle-xbox-series&preco=250','_blank')">Comprar Agora</button>
             </div>
-
             <div class="product-card">
                 <img class="image-zoom" src="imagem/controle/controle-02.png.png" alt="Controle PS5">
                 <div class="product-info">
@@ -198,7 +213,6 @@
                 <div class="product-price">R$ 350,00</div>
                 <button class="buy-btn filled" onclick="window.open('comprar.html?produto=controle-ps5-dualsense&preco=350','_blank')">Comprar Agora</button>
             </div>
-
             <div class="product-card">
                 <img class="image-zoom" src="imagem/controle/controle-03.png.png" alt="Controle Switch">
                 <div class="product-info">
@@ -218,14 +232,15 @@
         <p>Nébula Games © 2025 — Periféricos gamer com vibe cósmica</p>
     </footer>
 
-    <!-- MODAL ZOOM UNIVERSAL -->
+    <!-- MODAL ZOOM -->
     <div class="zoom-modal" id="zoomModal">
         <span class="close-zoom" onclick="closeZoom()">×</span>
         <img id="zoomedImg" src="" alt="Zoom do produto">
     </div>
 
+    <!-- SCRIPTS -->
     <script>
-        // Zoom em todas as imagens
+        // ZOOM NAS IMAGENS
         document.querySelectorAll('.image-zoom').forEach(img => {
             img.onclick = function() {
                 document.getElementById('zoomedImg').src = this.src;
@@ -241,6 +256,59 @@
 
         document.getElementById('zoomModal').onclick = e => { if (e.target === e.currentTarget) closeZoom(); };
         document.addEventListener('keyup', e => { if (e.key === 'Escape') closeZoom(); });
+
+        // HEADER QUE SOME AO SCROLL
+        let lastScroll = 0;
+        const header = document.getElementById('mainHeader');
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            if (currentScroll <= 0) {
+                header.classList.remove('scrolled');
+                return;
+            }
+            if (currentScroll > lastScroll && !header.classList.contains('scrolled')) {
+                header.classList.add('scrolled');
+            } else if (currentScroll < lastScroll && header.classList.contains('scrolled')) {
+                header.classList.remove('scrolled');
+            }
+            lastScroll = currentScroll;
+        });
+
+        // MENU DROPDOWN NA LOGO (mobile)
+        const menuToggle = document.getElementById('menuToggle');
+        const dropdownMenu = document.getElementById('dropdownMenu');
+
+        menuToggle.addEventListener('click', (e) => {
+            e.stopPropagation();
+            dropdownMenu.classList.toggle('active');
+
+            // Animação do X no hambúrguer
+            menuToggle.querySelectorAll('.hamburger span').forEach((span, i) => {
+                if (dropdownMenu.classList.contains('active')) {
+                    span.style.background = '#e040fb';
+                    if (i === 0) span.style.transform = 'rotate(45deg) translate(8px, 8px)';
+                    if (i === 1) span.style.opacity = '0';
+                    if (i === 2) span.style.transform = 'rotate(-45deg) translate(10px, -10px)';
+                } else {
+                    span.style.background = 'white';
+                    span.style.transform = 'none';
+                    span.style.opacity = '1';
+                }
+            });
+        });
+
+        // Fecha ao clicar fora
+        document.addEventListener('click', (e) => {
+            if (dropdownMenu.classList.contains('active') && !menuToggle.contains(e.target)) {
+                dropdownMenu.classList.remove('active');
+                // volta o hambúrguer normal
+                menuToggle.querySelectorAll('.hamburger span').forEach(span => {
+                    span.style.background = 'white';
+                    span.style.transform = 'none';
+                    span.style.opacity = '1';
+                });
+            }
+        });
     </script>
 
 </body>
